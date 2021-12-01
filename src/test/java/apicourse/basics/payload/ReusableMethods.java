@@ -1,4 +1,4 @@
-package apicourse.payload;
+package apicourse.basics.payload;
 
 import io.restassured.path.json.JsonPath;
 
@@ -7,4 +7,5 @@ public class ReusableMethods {
         JsonPath updatedJson = new JsonPath(response);
         return updatedJson;
     }
+
 }

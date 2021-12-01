@@ -1,4 +1,4 @@
-package apicourse;
+package apicourse.basics;
 
 /*1.Create place using create payload and extract response in a string.We use POST method here
  * 2.Take out place_id from string response using JsonPath class which parses the JSON string and returns
@@ -6,17 +6,15 @@ package apicourse;
  * 3.Use this place_id to update address of place using put method.
  * 4.To verify that address is updated use placeid and fetch data using GET method */
 
-import apicourse.payload.ReusableMethods;
+import apicourse.basics.payload.ReusableMethods;
 import io.restassured.path.json.JsonPath;
 import org.junit.Assert;
 import org.junit.Test;
 
-import static io.restassured.RestAssured.*;
 import static io.restassured.RestAssured.baseURI;
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.*;
 import static org.hamcrest.Matchers.equalTo;
-import static apicourse.payload.Payload.payloadForCreateUser;
+import static apicourse.basics.payload.Payload.payloadForCreateUser;
 
 public class CreateAndVerifyPlaceId {
   @Test

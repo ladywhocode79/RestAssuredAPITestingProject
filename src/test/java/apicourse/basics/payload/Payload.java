@@ -1,4 +1,4 @@
-package apicourse.payload;
+package apicourse.basics.payload;
 
 public class Payload {
     public static String payloadForCreateUser(){
@@ -19,6 +19,18 @@ public class Payload {
                     "  \"website\": \"http://google.com\",\n" +
                     "  \"language\": \"French-IN\"\n" +
                     "}\n"
+        );
+
+    }
+    public static String addBooksPayload(String isbn, String aisle) {
+        return (
+                "{\n" +
+                        "\n" +
+                        "\"name\":\"Learn Appium Automation with Java\",\n" +
+                        "\"isbn\":\""+isbn+"\",\n" +
+                        "\"aisle\":\""+aisle+"\",\n" +
+                        "\"author\":\"John foe\"\n" +
+                        "}\n"
         );
     }
 

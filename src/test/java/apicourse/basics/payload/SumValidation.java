@@ -1,4 +1,4 @@
-package apicourse.payload;
+package apicourse.basics.payload;
 
 import io.restassured.path.json.JsonPath;
 import org.junit.Assert;
