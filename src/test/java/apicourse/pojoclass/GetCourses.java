@@ -1,11 +1,11 @@
 package apicourse.pojoclass;
 
-public class GetCourse {
+public class GetCourses {
     private String url;
     private String instructor;
     private String services;
     private String expertise;
-    private String linkedlinUrl;
+    private String linkedIn;
     private Courses courses;
 
     public String getUrl() {
@@ -40,12 +40,12 @@ public class GetCourse {
         this.expertise = expertise;
     }
 
-    public String getLinkedlinUrl() {
-        return linkedlinUrl;
+    public String getLinkedIn() {
+        return linkedIn;
     }
 
-    public void setLinkedlinUrl(String linkedlinUrl) {
-        this.linkedlinUrl = linkedlinUrl;
+    public void setLinkedIn(String linkedIn) {
+        this.linkedIn = linkedIn;
     }
 
     public Courses getCourses() {
