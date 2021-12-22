@@ -1,30 +1,28 @@
-package apicourse.hashmap;
+package apicourse.exceltorestassured;
 
-import apicourse.basics.payload.Payload;
 import apicourse.basics.payload.ReusableMethods;
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import org.testng.Assert;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map;
 
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.equalTo;
 
 public class HashMapToJson {
     @Test
-    public void addBook(){
+    public void addBook() throws IOException {
+        DataDriven d = new DataDriven();
+        //get data from excel
+            ArrayList data = d.getData("RestAddBook","RestAssured");
         HashMap<String, Object> jsonAsMap = new HashMap<>();
-        jsonAsMap.put("name","RestAssured");
-        jsonAsMap.put("isbn","RDFG");
-        jsonAsMap.put("aisle","1000");
-        jsonAsMap.put("author","Sonal Solanki");
+        jsonAsMap.put("name",data.get(1));
+        jsonAsMap.put("isbn",data.get(2));
+        jsonAsMap.put("aisle",data.get(3));
+        jsonAsMap.put("author",data.get(4));
         /*Nested Json with Nested HAshmap
         HashMap<String, Object> map2 = new HashMap<>();
         map2.put("lat","23");
